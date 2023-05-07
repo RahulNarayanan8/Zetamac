@@ -33,12 +33,12 @@ try:
             first = int(operands[0])
             second = int(operands[1])
             result = int(first/second)
-        print("here")
         answer = driver.find_element(By.XPATH, "//*[@id='game']/div/div[1]/input")
         answer.send_keys(str(result))
         time.sleep(100/1000)
+        #adjust the sleep duration in order to boost score
 except:
-    print("something went wrong")
+    print("An error occurred")
 
 time.sleep(20)
 driver.quit()
